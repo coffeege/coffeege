@@ -1,0 +1,65 @@
+body {
+    background-color: black;
+    color: #fff;
+    font-family: 'Courier Prime' , monospace;
+}
+
+  .social-icons {
+    flex: 0 0 auto; /* don't grow or shrink */
+  }
+
+/* Typewriter effect for text */
+/* if you see this just pretend it works i am too lazy to fix it rn ty :) */
+
+h1 {
+    font-size: 48px;
+    animation: type 2s steps(20); 
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes type {
+    from { width: 0; }
+    
+  }
+
+
+  h2 {
+    text-align: center; 
+  }
+  
+  p {
+    font-size: 18px;
+  }
+  
+  .icon-container {
+    margin-top: 20px;
+  }
+
+  .image-container {
+    text-align: center;
+  }
+
+  .header {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .banner {
+    width: 100%;
+    height: auto;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
