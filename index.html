@@ -1,74 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>coffeege</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coffeege</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- idk socials ig? -->
-<!-- twitter -->
-<div class="image-container">
-  <a href="https://twitter.com/coffeege_">
-      <img src="assests/icons8-twitter-circled-48.png">
-  </a>
-</div>
+    <!-- idk socials ig? -->
+    <!-- twitter -->
+    <div class="image-container">
+        <a href="https://twitter.com/coffeege_">
+            <img src="assests/icons8-twitter-circled-48.png">
+        </a>
+    </div>
 
-<!-- steam -->
-<div class="image-container">
-<a href="https://steamcommunity.com/id/coffeege/">
-  <img src="assests/icons8-steam-48.png">
-</a>
-</div>
+    <!-- steam -->
+    <div class="image-container">
+        <a href="https://steamcommunity.com/id/coffeege/">
+            <img src="assests/icons8-steam-48.png">
+        </a>
+    </div>
 
-<!-- github but like there is literally nothing on here thats public idk why im putting this on here -->
-<div class="image-container">
-<a href="https://github.com/coffeege">
-  <img src="assests/icons8-github-48.png">
-</a>
-</div>
+        <!-- youtube -->
+        <div class="image-container">
+          <a href="https://www.youtube.com/channel/UC0AnQRcPE-2XUruHmMWY7Fw">
+              <img src="assests/icons8-youtube-48.png">
+          </a>
+      </div>
+
+    <header class="fixed header">
+        <h1> coffeege </h1>
+        <img src="assests/icons8-coffee-48.png">
+        <p id="greeting"></p>
+    </header>
+
+    <section class="container">
+        <p>
+            <h2>
+                . caffiene addict . cs enthusiast . programmer .
+            </h2>
+        </p>
+    </section>
+
+    <main>
+      <section id="journal">
+    </section>
 
 
+    <form id="journalForm">
+        <label for="entry">New Journal Entry:</label>
+        <textarea id="entry" rows="4" cols="50"></textarea>
+        <button type="button" onclick="addEntry()">Add Entry</button>
+    </form>
+</main>
 
-<header class="fixed header">
-    <h1> coffeege </h1>
-    <img src="assests/icons8-coffee-48.png">
-</header>
-
-<section class="container">
-    <p>
-        <h2>
-            . caffeine addict . cs enthusiast . programmer . 
-        </h2>
-    </p>
-</section>
-
-<!-- email me  -->
-<div class="contact-box">
-<h3> contact me </h3>
-  <form method="post" action="mailto:coffeegeee@gmail.com">
-
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name">
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
-
-    <label for="message">Message:</label>
-    <textarea id="message" name="message"></textarea>
-
-    <button type="submit">Send Email</button>
-
-  </form>
-
-</div>
-
-  <main>
-
-  </main>
-  
-
+    <script src="script.js"></script>
 </body>
+
 </html>

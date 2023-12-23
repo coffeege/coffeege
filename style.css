@@ -1,117 +1,172 @@
 body {
-    background-color: black;
-    color: #fff;
-    font-family: 'Courier Prime' , monospace;
-    height: 100%;
+  background-color: black;
+  color: #fff;
+  font-family: 'Courier Prime', monospace;
+  height: 100%;
+  cursor: url('assests/crosshair.svg') 16 16, crosshair;
 }
- 
-  .social-icons {
-    flex: 0 0 auto; /* don't grow or shrink */
-  }
+
+.social-icons {
+  flex: 0 0 auto; /* don't grow or shrink */
+}
 
 /* Typewriter effect for text */
-/* if you see this just pretend it works i am too lazy to fix it rn ty :) */
-/* update it does work i just have no idea what a typewriter animation looks like */
+/* If you see this, just pretend it works; I am too lazy to fix it right now, ty */
+/* Update: It does work; I just have no idea what a typewriter animation looks like */
 
 h1 {
-    font-size: 48px;
-    animation: type 2s steps(20); 
-    animation-fill-mode: forwards;
-  }
+  font-size: 48px;
+  overflow: hidden; 
+  animation: type 2s steps(20);
+  animation-fill-mode: forwards;
+}
 
-  @keyframes type {
-    from { width: 0; }
-    
+@keyframes type {
+  from {
+      width: 0;
   }
+  to {
+      width: 100%; 
+  }
+}
 
+h2 {
+  text-align: center;
+}
 
-  h2 {
-    text-align: center; 
-  }
-  
-  p {
-    font-size: 18px;
-  }
-  
-  .icon-container {
-    margin-top: 20px;
-  }
+p {
+  font-size: 18px;
+}
 
-  .image-container {
-    text-align: center;
-    display: inline-block;
-  }
+.icon-container {
+  margin-top: 20px;
+}
 
-  .header {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .banner {
-    width: 100%;
-    height: auto;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
+.image-container {
+  text-align: center;
+  display: inline-block;
+}
 
-  .contact-box {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 20px;
+.header {
+  padding: 20px;
+  text-align: center;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.contact-box {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 5px;
+  background: #f2f2f2;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: 'Courier Prime', monospace;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #444;
+}
+
+#journal {
+  margin-top: 20px;
+}
+
+#journalForm {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 10px;
+  background: #818181;
+  border-radius: 5px;
+}
+
+label, textarea, button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+button[type="button"] {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button[type="button"]:hover {
+  background-color: #444;
+}
+
+button[type="submit"],
+button.submit-button {
+    padding: 8px; 
     border-radius: 5px;
-    background: #f2f2f2;
-    color: #333;
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
-  }
-  
-  input, 
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-family: 'Courier Prime', monospace; 
-  }
-  
-  textarea {
-    min-height: 100px;
-  }
-  
-  button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px; 
     border: none;
     background: #333;
     color: white;
-    cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+button[type="submit"]:hover,
+button.submit-button:hover {
     background: #444;
-  }
+}
+
