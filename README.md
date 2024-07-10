@@ -1,7 +1,4 @@
-- 👋 Hi, I’m @coffeege
-- 📫 How to reach me:
-    my twitter: @coffeege_
-    my email: coffeegeee@gmail.com
+hi :)
 
 <!---
 coffeege/coffeege is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
