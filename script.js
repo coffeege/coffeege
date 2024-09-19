@@ -18,12 +18,18 @@ document.addEventListener('DOMContentLoaded', function () {
     // Update age dynamically every 50 milliseconds
     setInterval(() => {
         const ageElement = document.getElementById('age');
-        ageElement.textContent = dayjs().diff('1999-06-19', 'year', true).toFixed(10);  // Adjust birthdate if needed
+        ageElement.textContent = dayjs().diff('1999-06-19', 'year', true).toFixed(10);  
     }, 50);
 
     // journal entries
     displayEntries();
 });
+
+const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+});
+
 
 // time formatting
 function formatTime() {
