@@ -1,15 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // current hour
+document.addEventListener('DOMContentLoaded', function () {
+    // gm or gn
     const currentHour = new Date().getHours();
-
-    // greeting
     const greetingElement = document.getElementById('greeting');
-
-    // journal
-    const journalSection = document.getElementById('journal');
-
-    // gm or gn 
     let greeting;
+    
     if (currentHour >= 5 && currentHour < 12) {
         greeting = 'Good morning,';
     } else if (currentHour >= 12 && currentHour < 18) {
@@ -18,23 +12,29 @@ document.addEventListener('DOMContentLoaded', function() {
         greeting = 'Good night,';
     }
 
-    // hey :)
+    // what time is it
     greetingElement.textContent = `${greeting} it's ${formatTime()}`;
 
+    // Update age dynamically every 50 milliseconds
+    setInterval(() => {
+        const ageElement = document.getElementById('age');
+        ageElement.textContent = dayjs().diff('1999-06-19', 'year', true).toFixed(10);  // Adjust birthdate if needed
+    }, 50);
+
+    // journal entries
+    displayEntries();
 });
 
+// time formatting
 function formatTime() {
-    // tine format
     const options = { hour: 'numeric', minute: '2-digit' };
     return new Date().toLocaleTimeString([], options);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    displayEntries();
-});
-
+// journal entry
 function addEntry() {
     const entryText = document.getElementById('entry').value;
+
     if (entryText.trim() === '') {
         alert('Please enter a valid journal entry.');
         return;
@@ -46,20 +46,19 @@ function addEntry() {
     };
 
     const entries = JSON.parse(localStorage.getItem('journal')) || [];
-
     entries.push(entry);
 
     localStorage.setItem('journal', JSON.stringify(entries));
-
-    document.getElementById('entry').value = '';
+    document.getElementById('entry').value = ''; // Clear input field
 
     displayEntries();
 }
 
+// journal
 function displayEntries() {
     const entries = JSON.parse(localStorage.getItem('journal')) || [];
     const journalContainer = document.getElementById('journal');
-    journalContainer.innerHTML = '';
+    journalContainer.innerHTML = ''; // Clear the existing entries
 
     entries.forEach((entry, index) => {
         const entryElement = document.createElement('div');
@@ -72,18 +71,13 @@ function displayEntries() {
     });
 }
 
-
+// delete journal
 function deleteEntry(index) {
-
     const entries = JSON.parse(localStorage.getItem('journal')) || [];
+    entries.splice(index, 1); // Remove the entry at the specified index
 
-    entries.splice(index, 1);
-
-    localStorage.setItem('journal', JSON.stringify(entries));
-
-    displayEntries();
+    localStorage.setItem('journal', JSON.stringify(entries)); // Update localStorage
+    displayEntries(); // Refresh the displayed entries
 }
-
-
 
 

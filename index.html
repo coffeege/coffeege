@@ -4,62 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>coffeege</title>
+    <title>coffeege.</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- idk socials ig? -->
-    <!-- twitter -->
+    <!-- Social Media Links -->
     <div class="image-container">
         <a href="https://twitter.com/coffeege_">
-            <img src="assests/icons8-twitter-circled-48.png">
+            <img src="assets/icons8-twitter-circled-48.png" alt="Twitter">
         </a>
     </div>
 
-    <!-- steam -->
+    <div class="image-container">
+        <a href="https://github.com/coffeege">
+            <img src="assets/icons8-github-48.png" alt="Github">
+        </a>
+    </div>
+
+    <div class="image-container">
+        <a href="https://www.linkedin.com/in/catekeough/">
+            <img src="assets/icons8-linkedin-48.png" alt="Linkedin">
+        </a>
+    </div>
+    
+
     <div class="image-container">
         <a href="https://steamcommunity.com/id/coffeege/">
-            <img src="assests/icons8-steam-48.png">
+            <img src="assets/icons8-steam-48.png" alt="Steam">
         </a>
     </div>
 
-        <!-- youtube -->
-        <div class="image-container">
-          <a href="https://www.youtube.com/channel/UC0AnQRcPE-2XUruHmMWY7Fw">
-              <img src="assests/icons8-youtube-48.png">
-          </a>
-      </div>
+    <div class="image-container">
+        <a href="https://www.youtube.com/channel/UC0AnQRcPE-2XUruHmMWY7Fw">
+            <img src="assets/icons8-youtube-48.png" alt="YouTube">
+        </a>
+    </div>
 
     <header class="fixed header">
-        <h1> coffeege </h1>
-        <img src="assests/icons8-coffee-48.png">
+        <h1>coffeege.</h1>
+        <img src="assets/icons8-coffee-48.png" alt="Coffee icon">
         <p id="greeting"></p>
     </header>
 
     <section class="container">
+        <h2>. caffeine addict . cs enthusiast . programmer .</h2>
+    </section>
+
+    <section class="container">
+        <h2>
+            hi i am cate, i am <span id="age"></span> years old. i've been working in the gaming and entertainment industry for 
+            7+ years, first as a content creator and now as an aspiring ui/ux designer.
+        </h2>
+    </section>
+
+    <!-- resume -->
+    <section class="container resume-highlights">
+        <h2>my skills.</h2>
+        <ul>
+            <li><strong>7+ years</strong> of experience in the gaming and entertainment industry, transitioning from content creation to development.</li>
+            <li>skilled in <strong>UI/UX design</strong>, <strong>community management</strong>, and <strong>server management</strong>.</li>
+            <li>developed and managed bots for Counter-Strike 2 tournaments, including handling server issues and map bans.</li>
+            <li>experience collaborating with top brands like <strong>StreamElements</strong> and building a <strong>5000+ follower community</strong>.</li>
+            <li>proficient in <strong>Adobe Creative Suite</strong>, <strong>Figma</strong>, and <strong>Grammarly</strong> for communication and design projects.</li>
+            <li>strong background in <strong>DDoS protection</strong> and server-side technical management.</li>
+            <li>polyglot.</li>
+        </ul>
         <p>
-            <h2>
-                . caffiene addict . cs enthusiast . programmer .
-            </h2>
+            <a href="assets/resume-coffeege.pdf" target="_blank" class="resume-button">view resume</a>
         </p>
     </section>
 
-    <main>
-      <section id="journal">
-    </section>
-
-
-    <form id="journalForm">
-        <label for="entry">New Journal Entry:</label>
-        <textarea id="entry" rows="4" cols="50"></textarea>
-        <button type="button" onclick="addEntry()">Add Entry</button>
-    </form>
-</main>
-
-    <script src="script.js"></script>
+    <!-- External Libraries and Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="script.js"></script> <!-- Handles age and greeting -->
+    <script type="text/javascript" src="constants.js"></script>
+    <script type="text/javascript" src="board.js"></script>
+    <script type="text/javascript" src="piece.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>
