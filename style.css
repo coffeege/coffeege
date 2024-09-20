@@ -10,6 +10,10 @@ body {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (min-width: 600px) {
   body {
     padding: 0; 
@@ -91,12 +95,12 @@ a {
 }
 
 a:hover {
-  color: #f2a365;
+  color: #f265a0;
 }
 
 a:focus,
 button:focus {
-  outline: 2px solid #f2a365;
+  outline: 2px solid #f265a0;
   outline-offset: 4px;
 }
 
@@ -261,6 +265,7 @@ label {
   height: 100%;
 }
 
+
 .social-container {
   display: flex;
   justify-content: center;
@@ -270,6 +275,69 @@ label {
 .image-container {
   margin: 0 10px;
 }
+
+/* Base Styles */
+body {
+  font-family: 'Courier Prime', monospace;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Courier Prime', monospace;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #111;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  height: 60px; 
+}
+
+.main-content {
+  margin-top: 60px; 
+}
+
+.fixed.header {
+  padding-top: 60px; 
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f265a0;
+}
+
+
 
 
 

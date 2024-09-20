@@ -11,126 +11,163 @@
 </head>
 
 <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#about">about</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#resume">resume</a></li>
+                <li><a href="#references">references</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
 
-    <button id="darkModeToggle">toggle dark mode.</button>
+    <div class="main-content">
 
-    <!-- socials -->
-    <div class="social-container">
-        <div class="image-container">
-            <a href="https://twitter.com/coffeege_">
-                <img src="assets/icons8-twitter-circled-48.png" alt="Twitter">
-            </a>
-        </div>
+        <!-- yippie -->
+        <header id="about" class="fixed header">
+            <h1>coffeege.</h1>
+            <img src="assets/icons8-coffee-48.png" alt="Coffee icon">
+            <p id="greeting"></p>
+        </header>
 
-        <div class="image-container">
-            <a href="https://github.com/coffeege">
-                <img src="assets/icons8-github-48.png" alt="Github">
-            </a>
-        </div>
+        <!-- socials -->
+        <section class="social-container">
+            <div class="image-container">
+                <a href="https://twitter.com/coffeege_">
+                    <img src="assets/icons8-twitter-circled-48.png" alt="Twitter">
+                </a>
+            </div>
 
-        <div class="image-container">
-            <a href="https://www.linkedin.com/in/catekeough/">
-                <img src="assets/icons8-linkedin-48.png" alt="LinkedIn">
-            </a>
-        </div>
+            <div class="image-container">
+                <a href="https://github.com/coffeege">
+                    <img src="assets/icons8-github-48.png" alt="Github">
+                </a>
+            </div>
 
-        <div class="image-container">
-            <a href="https://steamcommunity.com/id/coffeege/">
-                <img src="assets/icons8-steam-48.png" alt="Steam">
-            </a>
-        </div>
+            <div class="image-container">
+                <a href="https://www.linkedin.com/in/catekeough/">
+                    <img src="assets/icons8-linkedin-48.png" alt="LinkedIn">
+                </a>
+            </div>
 
-        <div class="image-container">
-            <a href="https://www.youtube.com/channel/UC0AnQRcPE-2XUruHmMWY7Fw">
-                <img src="assets/icons8-youtube-48.png" alt="YouTube">
-            </a>
-        </div>
+            <div class="image-container">
+                <a href="https://steamcommunity.com/id/coffeege/">
+                    <img src="assets/icons8-steam-48.png" alt="Steam">
+                </a>
+            </div>
+
+            <div class="image-container">
+                <a href="https://www.youtube.com/channel/UC0AnQRcPE-2XUruHmMWY7Fw">
+                    <img src="assets/icons8-youtube-48.png" alt="YouTube">
+                </a>
+            </div>
+        </section>
+
+        <!-- who i am -->
+        <section id="about" class="container">
+            <h2>. caffeine addict . cs enthusiast . programmer .</h2>
+            <h2>
+                hi i am katya, i am <span id="age"></span> years old. i've been working in the gaming and entertainment industry for 
+                7+ years, first as a content creator and now as an aspiring ui/ux designer.
+            </h2>
+        </section>
+
+        <!-- what i can do  -->
+        <section id="skills" class="container skills">
+            <h2>skills.</h2>
+
+            <div class="skill-bar">
+                <h3>node.js</h3>
+                <div class="bar"><div class="progress" style="width: 90%;"></div></div>
+            </div>
+
+            <div class="skill-bar">
+                <h3>javascript.</h3>
+                <div class="bar"><div class="progress" style="width: 95%;"></div></div>
+            </div>
+
+            <div class="skill-bar">
+                <h3>figma.</h3>
+                <div class="bar"><div class="progress" style="width: 95%;"></div></div>
+            </div>
+
+            <div class="skill-bar">
+                <h3>react.</h3>
+                <div class="bar"><div class="progress" style="width: 70%;"></div></div>
+            </div>
+
+            <div class="skill-bar">
+                <h3>mysql.</h3>
+                <div class="bar"><div class="progress" style="width: 70%;"></div></div>
+            </div>
+
+            <div class="skill-bar">
+                <h3>docker.</h3>
+                <div class="bar"><div class="progress" style="width: 65%;"></div></div>
+            </div>
+        </section>
+
+        <!-- thing i did -->
+        <section id="projects" class="container">
+            <h2>projects.</h2>
+            <div class="project-item">
+                <h3>cs2 tournament management bot.</h3>
+                <p>built a bot to handle map bans, server issues, and overall tournament management for cs2 events.</p>
+            </div>
+            <div class="project-item">
+                <h3>custom discord bot for cs2 10 mans.</h3>
+                <p>built a discord bot to handle joining / leaving a queue in order to play games.</p>
+            </div>
+            <div class="project-item">
+                <h3>stream overlay customization tool.</h3>
+                <p>created a customizable stream overlay for content creators, integrating real-time follower counts, donations, and chat interactions.</p>
+            </div>
+        </section>
+
+        <!-- thing i did -->
+        <section id="resume" class="container resume-highlights">
+            <h2>resume highlights.</h2>
+            <ul>
+                <li><strong>7+ years</strong> of experience in the gaming and entertainment industry, transitioning from content creation to development.</li>
+                <li>skilled in <strong>UI/UX design</strong>, <strong>community management</strong>, and <strong>server management</strong>.</li>
+                <li>developed and managed bots for Counter-Strike 2 tournaments, including handling server issues and map bans.</li>
+                <li>experience collaborating with top brands like <strong>StreamElements</strong> and building a <strong>5000+ follower community</strong>.</li>
+                <li>proficient in <strong>Adobe Creative Suite</strong>, <strong>Figma</strong>, and <strong>Grammarly</strong> for communication and design projects.</li>
+                <li>strong background in <strong>DDoS protection</strong> and server-side technical management.</li>
+                <li>polyglot.</li>
+            </ul>
+            <p>
+                <a href="assets/resume-coffeege.pdf" target="_blank" class="resume-button">view resume</a>
+            </p>
+        </section>
+
+        <!-- tell me i am good pls -->
+        <section id="references" class="container testimonials">
+            <h2>references.</h2>
+            <blockquote>
+                "katya is an incredibly dedicated person who strives to learn and persevere through any challenges. my experience as a mentor gave me insight to her passion when she started learning software development; she’s an individual who always seeks to understand concepts wholly and tries arrive at solutions independently without over reliance on help. her creativity is definitely understated and would be a great fit at any company capable at maximizing her expertise."
+            </blockquote>
+            <p>- ivan tse, telus.</p>
+            
+            <blockquote>
+                "coffee is a fantastic software engineer who has always been eager to learn and grow in her developmental journey. She has been an invaluable asset while working with me on various projects. She consistently delivers high-quality work with high attention to detail. Her dedication and focus make her a well trusted and hard working collaborator."
+            </blockquote>
+            <p>- zach "sphaxa" skaistis, fragadelphia. </p>
+            
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container">
+            <h2>contact me.</h2>
+            <a href="mailto:coffeegeee@gmail.com" class="cta-button">email me</a>
+        </section>
+
     </div>
 
-    <header class="fixed header">
-        <h1>coffeege.</h1>
-        <img src="assets/icons8-coffee-48.png" alt="Coffee icon">
-        <p id="greeting"></p>
-    </header>
-
-    <section class="container">
-        <h2>. caffeine addict . cs enthusiast . programmer .</h2>
-    </section>
-
-    <section class="container">
-        <h2>
-            hi i am katya, i am <span id="age"></span> years old. i've been working in the gaming and entertainment industry for 
-            7+ years, first as a content creator and now as an aspiring ui/ux designer.
-        </h2>
-    </section>
-
-    <!-- skills -->
-    <section class="container skills">
-        <h2>skills.</h2>
-
-        <div class="skill-bar">
-            <h3>node.js</h3>
-            <div class="bar"><div class="progress" style="width: 90%;"></div></div>
-        </div>
-
-        <div class="skill-bar">
-            <h3>javascript.</h3>
-            <div class="bar"><div class="progress" style="width: 95%;"></div></div>
-        </div>
-
-        <div class="skill-bar">
-            <h3>figma.</h3>
-            <div class="bar"><div class="progress" style="width: 95%;"></div></div>
-        </div>
-
-        <div class="skill-bar">
-            <h3>react.</h3>
-            <div class="bar"><div class="progress" style="width: 70%;"></div></div>
-        </div>
-
-        <div class="skill-bar">
-            <h3>mysql.</h3>
-            <div class="bar"><div class="progress" style="width: 70%;"></div></div>
-        </div>
-
-        <div class="skill-bar">
-            <h3>docker.</h3>
-            <div class="bar"><div class="progress" style="width: 65%;"></div></div>
-        </div>
-    </section>
-
-    <!-- resume -->
-    <section class="container resume-highlights">
-        <h2>...</h2>
-        <ul>
-            <li><strong>7+ years</strong> of experience in the gaming and entertainment industry, transitioning from content creation to development.</li>
-            <li>skilled in <strong>UI/UX design</strong>, <strong>community management</strong>, and <strong>server management</strong>.</li>
-            <li>developed and managed bots for Counter-Strike 2 tournaments, including handling server issues and map bans.</li>
-            <li>experience collaborating with top brands like <strong>StreamElements</strong> and building a <strong>5000+ follower community</strong>.</li>
-            <li>proficient in <strong>Adobe Creative Suite</strong>, <strong>Figma</strong>, and <strong>Grammarly</strong> for communication and design projects.</li>
-            <li>strong background in <strong>DDoS protection</strong> and server-side technical management.</li>
-            <li>polyglot.</li>
-        </ul>
-        <p>
-            <a href="assets/resume-coffeege.pdf" target="_blank" class="resume-button">view resume</a>
-        </p>
-    </section>
-
-    <!-- References -->
-    <section class="container testimonials">
-        <h2>References</h2>
-        <blockquote>
-            "Katya is an incredibly dedicated person who strives to learn and persevere through any challenges. My experience as a mentor gave me insight to her passion when she started learning software development; she’s an individual who always seeks to understand concepts wholly and tries arrive at solutions independently without over reliance on help. Her creativity is definitely understated and would be a great fit at any company capable at maximizing her expertise."
-        </blockquote>
-        <p> - Ivan Tse, Telus</p>
-    </section>
-
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-    <script src="script.js"></script> <!-- Handles age and greeting -->
-    <script type="text/javascript" src="constants.js"></script>
-    <script type="text/javascript" src="board.js"></script>
-    <script type="text/javascript" src="piece.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

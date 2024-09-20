@@ -25,6 +25,14 @@ document.addEventListener('DOMContentLoaded', function () {
     displayEntries();
 });
 
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+
 const darkModeToggle = document.getElementById('darkModeToggle');
 darkModeToggle.addEventListener('click', () => {
   document.body.classList.toggle('light-mode');
@@ -85,5 +93,8 @@ function deleteEntry(index) {
     localStorage.setItem('journal', JSON.stringify(entries)); // Update localStorage
     displayEntries(); // Refresh the displayed entries
 }
+
+
+
 
 
