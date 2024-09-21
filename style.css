@@ -1,4 +1,3 @@
-/* Base Styles */
 body {
   background-color: black;
   color: #fff;
@@ -7,7 +6,7 @@ body {
   cursor: url('assets/crosshair.svg') 16 16, crosshair;
   line-height: 1.6;
   margin: 0;
-  padding: 20px; 
+  padding: 20px;
   box-sizing: border-box;
 }
 
@@ -16,13 +15,12 @@ html {
 }
 
 .main-content {
-  padding-top: 60px; 
+  padding-top: 60px;
 }
 
 .header {
-  margin-top: 60px; 
+  margin-top: 60px;
 }
-
 
 @media (min-width: 600px) {
   body {
@@ -39,17 +37,25 @@ h1 {
   width: fit-content;
   margin: 0 auto;
   animation: type 3.5s steps(40, end), blink 0.75s step-end infinite;
-  line-height: 1.2; 
+  line-height: 1.2;
 }
 
 @keyframes type {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink {
-  from { border-color: rgba(255, 255, 255, 0.75); }
-  to { border-color: transparent; }
+  from {
+    border-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-color: transparent;
+  }
 }
 
 h2 {
@@ -57,7 +63,7 @@ h2 {
   font-size: 24px;
   margin: 20px 0;
   letter-spacing: 1px;
-  line-height: 1.4; 
+  line-height: 1.4;
 }
 
 p {
@@ -104,45 +110,47 @@ a:hover {
   color: #f265a0;
 }
 
-a:focus,
-button:focus {
-  outline: 2px solid #f265a0;
-  outline-offset: 4px;
+#contact {
+  text-align: center;
 }
 
-button[type="submit"],
-button.submit-button,
-button[type="button"],
-.resume-button {
-  width: auto;
-  padding: 10px 20px;
+#resume {
+  text-align: center; 
+}
+
+.resume-button, .cta-button {
+  display: inline-block;
+  padding: 12px 24px;
   border-radius: 5px;
   border: none;
   background: #333;
   color: white;
   font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  text-decoration: none;
+  margin: 20px auto; 
 }
 
-button[type="submit"]:hover,
-button.submit-button:hover,
-button[type="button"]:hover,
-.resume-button:hover {
+.resume-button:hover, .cta-button:hover {
   background-color: #444;
-  transform: translateY(-2px); 
+  transform: translateY(-2px);
+  color: #f265a0;
 }
 
-button[type="submit"]:active,
-button.submit-button:active,
-button[type="button"]:active,
-.resume-button:active {
-  transform: translateY(1px); 
+.resume-button:active, .cta-button:active {
+  transform: translateY(1px);
 }
 
-input,
-textarea {
+.resume-button:focus, .cta-button:focus {
+  outline: 2px solid #f265a0;
+  outline-offset: 4px;
+}
+
+input, textarea {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
@@ -189,7 +197,6 @@ textarea {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Social Media Section */
 .social-container {
   display: flex;
   justify-content: center;
@@ -200,7 +207,6 @@ textarea {
   margin: 0 10px;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -216,18 +222,16 @@ textarea {
   overflow: hidden;
 }
 
-/* Logo in Navbar */
 .navbar .logo {
   font-size: 24px;
   color: white;
 }
 
-/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .nav-links li {
