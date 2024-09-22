@@ -33,10 +33,31 @@ hamburger.addEventListener('click', () => {
 });
 
 
-const darkModeToggle = document.getElementById('darkModeToggle');
-darkModeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
+const toggleButton = document.getElementById('theme-toggle');
+const body = document.body;
+const themeIcon = document.getElementById('theme-icon');
+
+// Check for saved theme in local storage
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme) {
+    body.classList.add(savedTheme);
+    themeIcon.src = savedTheme === 'light-mode' ? 'assets/icons8-moon-48.png' : 'assets/icons8-sun-48.png';
+}
+
+toggleButton.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    
+    // Change the icon based on the theme
+    if (body.classList.contains('light-mode')) {
+        themeIcon.src = 'assets/icons8-moon-48.png'; 
+        localStorage.setItem('theme', 'light-mode');
+    } else {
+        themeIcon.src = 'assets/icons8-sun-48.png'; // Switch to sun icon for light mode
+        localStorage.removeItem('theme');
+    }
 });
+
 
 
 // time formatting
