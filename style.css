@@ -25,23 +25,26 @@ html {
 /* Light Mode Styling */
 .light-mode {
   background-color: #f0f0f0;
-  color: #000;
+  color: #000; /* Text color in light mode */
 }
 
 .light-mode a {
   color: #000;
 }
 
-.light-mode .navbar {
-  background-color: #f0f0f0; /* Lighter navbar in light mode */
-}
-
-.light-mode .navbar .logo, 
-.light-mode .nav-links a {
-  color: black; /* Black navbar text in light mode */
-}
-
+.light-mode h1, 
+.light-mode h2, 
+.light-mode p, 
+.light-mode .navbar a, 
 .light-mode .header {
+  color: #000; 
+}
+
+.light-mode .navbar {
+  background-color: #f0f0f0; 
+}
+
+.light-mode .navbar .logo {
   color: black; 
 }
 
@@ -134,14 +137,13 @@ p {
 .image-container {
   text-align: center;
   display: inline-block;
-  margin: 20px auto;
+  margin: 0 15px;
 }
 
 .image-container img {
   width: 48px; /* Adjust icon size */
   height: 48px;
   transition: transform 0.3s ease;
-  margin: 20px auto;
 }
 
 .image-container img:hover {
@@ -153,7 +155,6 @@ a {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
-  margin: 20px auto;
 }
 
 a:hover {
@@ -166,7 +167,7 @@ a:hover {
 }
 
 .resume-button, .cta-button {
-  display: block; 
+  display: block; /* Ensure buttons are block-level */
   padding: 12px 24px;
   border-radius: 5px;
   border: none;
@@ -179,7 +180,7 @@ a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   text-align: center;
   text-decoration: none;
-  margin: 20px auto; 
+  margin: 20px auto; /* Center buttons */
 }
 
 .resume-button:hover, .cta-button:hover {
@@ -327,7 +328,7 @@ textarea {
 
   .nav-links li {
     display: block;
-    margin: 20px auto;
+    margin: 10px 0;
   }
 
   .nav-links a {
