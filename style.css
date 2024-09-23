@@ -1,3 +1,4 @@
+/* General Styling */
 body {
   background-color: black;
   color: #fff;
@@ -14,6 +15,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Socials */
+.social-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
 /* Light Mode Styling */
 .light-mode {
   background-color: #f0f0f0;
@@ -25,28 +33,28 @@ html {
 }
 
 .light-mode .navbar {
-  background-color: #111; /* Keeps the navbar black in light mode */
+  background-color: #f0f0f0; /* Lighter navbar in light mode */
 }
 
 .light-mode .navbar .logo, 
 .light-mode .nav-links a {
-  color: white; /* Keeps navbar links white */
+  color: black; /* Black navbar text in light mode */
 }
 
-.main-content {
-  padding-top: 60px;
+.light-mode .header {
+  color: black; 
 }
 
+/* Header Styling */
 .header {
   margin-top: 60px;
+  color: white; /* Default dark mode color */
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-@media (min-width: 600px) {
-  body {
-    padding: 0;
-  }
-}
-
+/* Typography */
 h1 {
   font-size: 48px;
   text-align: center;
@@ -90,12 +98,14 @@ p {
   margin: 10px 0;
 }
 
+/* Centering */
 .center-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Theme Toggle */
 .theme-toggle-btn {
   background: none;
   border: none;
@@ -113,6 +123,7 @@ p {
   transform: scale(1.1);
 }
 
+/* Container Styling */
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -120,43 +131,42 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.header {
-  padding: 20px;
+.image-container {
   text-align: center;
-  margin-bottom: 40px;
+  display: inline-block;
+  margin: 20px auto;
+}
+
+.image-container img {
+  width: 48px; /* Adjust icon size */
+  height: 48px;
+  transition: transform 0.3s ease;
+  margin: 20px auto;
 }
 
 .image-container img:hover {
   transform: scale(1.1);
-  transition: transform 0.3s ease;
 }
 
-.image-container {
-  text-align: center;
-  display: inline-block;
-  margin: 0 15px;
-}
-
+/* Links */
 a {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
+  margin: 20px auto;
 }
 
 a:hover {
   color: #f265a0;
 }
 
-#contact {
+/* Contact and Resume */
+#contact, #resume {
   text-align: center;
 }
 
-#resume {
-  text-align: center; 
-}
-
 .resume-button, .cta-button {
-  display: inline-block;
+  display: block; 
   padding: 12px 24px;
   border-radius: 5px;
   border: none;
@@ -187,6 +197,7 @@ a:hover {
   outline-offset: 4px;
 }
 
+/* Inputs and Textareas */
 input, textarea {
   width: 100%;
   padding: 12px;
@@ -202,6 +213,7 @@ textarea {
   min-height: 120px;
 }
 
+/* Skill Bars */
 .skill-bar {
   margin: 20px 0;
 }
@@ -223,6 +235,7 @@ textarea {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Contact Box */
 .contact-box {
   max-width: 600px;
   margin: 40px auto;
@@ -234,16 +247,7 @@ textarea {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.social-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.image-container {
-  margin: 0 10px;
-}
-
+/* Navbar Styling */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -256,7 +260,6 @@ textarea {
   z-index: 1000;
   height: 60px;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .navbar .logo {
@@ -324,10 +327,55 @@ textarea {
 
   .nav-links li {
     display: block;
-    margin: 10px 0;
+    margin: 20px auto;
   }
 
   .nav-links a {
     font-size: 20px;
   }
+}
+
+/* Journal Mode */
+.journal-mode body {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+.journal-mode h2, .journal-mode p {
+  color: #f7f7f7;
+}
+
+.journal-mode #journal {
+  background-color: #222;
+  padding: 20px;
+  border: 2px solid #dd6cd6;
+  box-shadow: 0 0 15px #dd6cd6, 0 0 30px rgba(0, 0, 0, 0.5);
+  margin: 40px auto;
+  max-width: 900px;
+  font-size: 18px;
+}
+
+#journal-entry-form textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #333;
+  color: #fff;
+}
+
+#journal-entry-form button {
+  padding: 10px 20px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#journal-entry-form button:hover {
+  background-color: #555;
 }

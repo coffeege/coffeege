@@ -42,7 +42,7 @@
         </header>
 
         <!-- socials -->
-        <section class="social-container">
+        <section class="social-container" id=icons>
             <div class="image-container">
                 <a href="https://twitter.com/coffeege_">
                     <img src="assets/icons8-twitter-circled-48.png" alt="Twitter">
@@ -82,6 +82,18 @@
                 7+ years, first as a content creator and now as an aspiring ui/ux designer.
             </h2>
         </section>
+
+        <!-- secret -->
+        <section id="journal" class="container" style="display:none;">
+            <h2>Journal</h2>
+            <div id="journal-entries"></div> <
+            
+            <div id="journal-entry-form" style="display: none;">
+                <textarea id="entry" placeholder="..."></textarea>
+                <button class="submit-button" onclick="addEntry()">add.</button>
+            </div>
+        </section>
+        
 
         <!-- what i can do  -->
         <section id="skills" class="container skills">
@@ -157,15 +169,19 @@
         <section id="references" class="container testimonials">
             <h2>references.</h2>
             <blockquote>
-                "katya is an incredibly dedicated person who strives to learn and persevere through any challenges. my experience as a mentor gave me insight to her passion when she started learning software development; she’s an individual who always seeks to understand concepts wholly and tries arrive at solutions independently without over reliance on help. her creativity is definitely understated and would be a great fit at any company capable at maximizing her expertise."
+                "katya is an incredibly dedicated person who strives to learn and persevere through any challenges. my experience as a mentor gave me insight to her passion when she started learning software development; she’s an individual who always seeks to understand concepts wholly and tries to arrive at solutions independently without over reliance on help. her creativity is definitely understated and would be a great fit at any company capable at maximizing her expertise."
             </blockquote>
             <p>- ivan tse, telus.</p>
             
             <blockquote>
-                "coffee is a fantastic software engineer who has always been eager to learn and grow in her developmental journey. She has been an invaluable asset while working with me on various projects. She consistently delivers high-quality work with high attention to detail. Her dedication and focus make her a well trusted and hard working collaborator."
+                "coffee is a fantastic software engineer and designer who has always been eager to learn and grow in her developmental journey. She has been an invaluable asset while working with me on various projects. She consistently delivers high-quality work with high attention to detail. Her dedication and focus make her a well trusted and hard working collaborator."
             </blockquote>
             <p>- zach "sphaxa" skaistis, fragadelphia. </p>
-            
+                 
+            <blockquote>
+                "I have had the pleasure of collaborating with katya on multiple occasions. Her eye for stylised yet tasteful design choices combined with her rapid turnaround resulted in the conception of multiple coveted Destiny 2 raid guides. She is a joy to work with on a professional and human level, and I would recommend her to any company who seeks to employ someone dedicated to their work as much as they are the development of themselves."
+            </blockquote>
+            <p>- charlie dawson. </p>       
         </section>
 
         <!-- Contact Section -->
@@ -173,6 +189,7 @@
             <h2>contact me.</h2>
             <a href="mailto:coffeegeee@gmail.com" class="cta-button">email me</a>
         </section>
+        
 
     </div>
 
