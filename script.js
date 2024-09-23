@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("journal").style.display = "block";
         document.getElementById("journal-entry-form").style.display = "block"; // Show the entry form
         document.body.classList.add("journal-mode"); // Apply the journal mode style
-        alert("Konami code activated! Journal mode enabled.");
+        alert("journal mode on.");
 
         displayEntries();
     }
