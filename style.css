@@ -380,3 +380,142 @@ textarea {
 #journal-entry-form button:hover {
   background-color: #555;
 }
+
+.case-study-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 100%;
+}
+
+.arrow {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #f265a0;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.case-study-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.case-study {
+  display: none; 
+}
+
+.case-study.active {
+  display: flex; 
+  flex-direction: column;
+}
+
+.case-study img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.description {
+    display: none; /* Initially hide the description */
+}
+
+.case-study-content .toggle-description {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.case-study-content .toggle-description:hover {
+    background-color: #444;
+    color: #f265a0;
+}
+
+
+#projects {
+  padding: 40px;
+  background-color: #111;
+  color: #fff;
+}
+
+#projects h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.case-study {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.case-study-image {
+  max-width: 300px;
+  border-radius: 10px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.case-study-content {
+  max-width: calc(100% - 320px); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.case-study h3 {
+  font-size: 28px;
+  color: #f265a0;
+  margin-bottom: 10px;
+}
+
+.case-study p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.case-study a.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 10px;
+  background-color: #333;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.case-study a.cta-button:hover {
+  background-color: #444;
+  transform: translateY(-2px);
+  color: #f265a0;
+}
+
+@media (max-width: 768px) {
+  .case-study {
+      flex-direction: column;
+  }
+
+  .case-study-image {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .case-study-content {
+      max-width: 100%;
+  }
+}

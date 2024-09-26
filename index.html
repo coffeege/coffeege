@@ -86,7 +86,7 @@
         <!-- secret -->
         <section id="journal" class="container" style="display:none;">
             <h2>Journal</h2>
-            <div id="journal-entries"></div> <
+            <div id="journal-entries"></div> 
             
             <div id="journal-entry-form" style="display: none;">
                 <textarea id="entry" placeholder="..."></textarea>
@@ -129,24 +129,46 @@
                 <div class="bar"><div class="progress" style="width: 65%;"></div></div>
             </div>
         </section>
-
-        <!-- thing i did -->
+  
         <section id="projects" class="container">
             <h2>projects.</h2>
-            <div class="project-item">
-                <h3>cs2 tournament management bot.</h3>
-                <p>built a bot to handle map bans, server issues, and overall tournament management for cs2 events.</p>
+            <div class="case-study-carousel">
+                <button class="arrow left-arrow" id="prevCaseStudy">&#8592;</button>
+                
+                <div class="case-study-container">
+                    <div class="case-study" id="caseStudy1">
+                        <img src="assets/fragbot..png" alt="Fragbot Project" class="case-study-image">
+                        <div class="case-study-content">
+                            <h3>fragbot.</h3>
+                            <p><strong>role:</strong> developer.</p>
+                            <a href="https://imgur.com/a/7QDSnei" class="cta-button">view full case study.</a>
+                        </div>
+                    </div>
+        
+                    <div class="case-study" id="caseStudy2">
+                        <img src="assets/voltaic.gg.png" alt="Voltaic Case Study" class="case-study-image">
+                        <div class="case-study-content">
+                            <h3>voltaic.gg.</h3>
+                            <p><strong>Role:</strong> UI/UX designer.</p>
+                            <a href="https://imgur.com/a/aVAuI4Y" class="cta-button">view full case study.</a>
+                        </div>
+                    </div>
+        
+                    <!-- Fix for Radiant Keys -->
+                    <div class="case-study" id="caseStudy3">
+                        <img src="assets/radiant-keys.png" alt="radiant-keys-site-design" class="case-study-image">
+                        <div class="case-study-content">
+                            <h3>radiant keys.</h3>
+                            <p><strong>Role:</strong> website designer.</p>
+                            <a href="https://imgur.com/a/0dkB51I" class="cta-button">view full design.</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <button class="arrow right-arrow" id="nextCaseStudy">&#8594;</button>
             </div>
-            <div class="project-item">
-                <h3>custom discord bot for cs2 10 mans.</h3>
-                <p>built a discord bot to handle joining / leaving a queue in order to play games.</p>
-            </div>
-            <div class="project-item">
-                <h3>stream overlay customization tool.</h3>
-                <p>created a customizable stream overlay for content creators, integrating real-time follower counts, donations, and chat interactions.</p>
-            </div>
-        </section>
-
+        </section>        
+        
         <!-- thing i did -->
         <section id="resume" class="container resume-highlights">
             <h2>resume highlights.</h2>
@@ -162,7 +184,7 @@
         </section>
 
         <section id="resume" class="container">
-    
+            <a href="assets/katya-resume (1).pdf" target="_blank" class="resume-button">view resume</a>
         </section>
 
         <!-- tell me i am good pls -->

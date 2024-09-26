@@ -1,38 +1,59 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Greeting (gm or gn)
-    const currentHour = new Date().getHours();
-    const greetingElement = document.getElementById('greeting');
-    let greeting;
+document.addEventListener('DOMContentLoaded', function() {
+    const caseStudies = document.querySelectorAll('.case-study');
+    let currentIndex = 0;
 
-    if (currentHour >= 5 && currentHour < 12) {
-        greeting = 'Good morning,';
-    } else if (currentHour >= 12 && currentHour < 18) {
-        greeting = 'Good afternoon,';
-    } else {
-        greeting = 'Good night,';
+    // Show the first case study initially
+    caseStudies[currentIndex].classList.add('active');
+
+    function updateCaseStudy(index) {
+        caseStudies.forEach((study, i) => {
+            study.style.display = (i === index) ? 'flex' : 'none'; // Show the current case study
+        });
     }
 
-    greetingElement.textContent = `${greeting} it's ${formatTime()}`;
+    // Handle next button click
+    document.getElementById('nextCaseStudy').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % caseStudies.length;
+        updateCaseStudy(currentIndex);
+    });
 
-    // Update age dynamically every 50 milliseconds
+    // Handle previous button click
+    document.getElementById('prevCaseStudy').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + caseStudies.length) % caseStudies.length;
+        updateCaseStudy(currentIndex);
+    });
+
+    // Toggle description visibility
+    document.querySelectorAll('.toggle-description').forEach(button => {
+        button.addEventListener('click', function() {
+            const description = this.nextElementSibling;
+            if (description.style.display === 'none' || description.style.display === '') {
+                description.style.display = 'block';
+                this.textContent = 'Hide Description';
+            } else {
+                description.style.display = 'none';
+                this.textContent = 'Show Description';
+            }
+        });
+    });
+});
+
+ // Update age dynamically every 50 milliseconds
     setInterval(() => {
         const ageElement = document.getElementById('age');
         ageElement.textContent = dayjs().diff('1999-06-19', 'year', true).toFixed(10);
     }, 50);
 
-    // Select necessary elements
     const navbar = document.querySelector('.navbar');
     const journal = document.querySelector('#journal');
     const themeIcon = document.getElementById('theme-icon');
 
-    // Check for saved theme in localStorage
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         document.body.classList.add(savedTheme);
         themeIcon.src = savedTheme === 'light-mode' ? 'assets/icons8-moon-48.png' : 'assets/icons8-sun-48.png';
     }
 
-    // Theme toggle functionality
     document.getElementById('theme-toggle').addEventListener('click', function () {
         const isLightMode = document.body.classList.toggle('light-mode');
         
@@ -88,7 +109,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Display journal entries on load (when journal mode is activated)
     displayEntries();
-});
 
 // Time formatting function
 function formatTime() {
@@ -130,7 +150,7 @@ function displayEntries() {
         entryElement.innerHTML = `
             <p>${entry.text}</p>
             <small>${entry.timestamp}</small>
-            <button class="submit-button" onclick="deleteEntry(${index})">Delete</button>
+            <button class="submit-button" onclick="deleteEntry(${index})">delete</button>
         `;
         journalContainer.appendChild(entryElement);
     });
